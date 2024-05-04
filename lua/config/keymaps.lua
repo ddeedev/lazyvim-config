@@ -3,3 +3,5 @@
 -- Add any additional keymaps here
 vim.api.nvim_set_keymap("n", "<leader>n", ":ASToggle<CR>", {})
 vim.api.nvim_set_keymap("n", "<leader>gi",":Flog<CR>",{})
+vim.keymap.del("n", "<leader>ft")
+vim.keymap.del("n", "<leader>fT")
