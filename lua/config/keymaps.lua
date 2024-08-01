@@ -5,3 +5,5 @@ vim.api.nvim_set_keymap("n", "<leader>n", ":ASToggle<CR>", {desc = "Toggle Autos
 vim.api.nvim_set_keymap("n", "<leader>gi",":Flog<CR>",{})
 vim.keymap.del("n", "<leader>ft")
 vim.keymap.del("n", "<leader>fT")
+vim.api.nvim_set_keymap("n", "<leader>e", ":Neotree toggle float<CR>", {desc = "Float File Explorer", silent = true} )
+vim.api.nvim_set_keymap("n", "<leader>r", ":Neotree toggle right<CR>", {desc = "Right File Explorer", silent = true} )
