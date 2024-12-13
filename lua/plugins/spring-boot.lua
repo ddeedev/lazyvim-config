@@ -20,7 +20,7 @@ return {
         ls_path = nil, -- defaults to ~/.vscode/extensions/vmware.vscode-spring-boot-x.xx.x
         jdtls_name = "jdtls",
         log_file = nil,
-        java_cmd = "~/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home/bin/java", -- by default will try to get java 17+ path by using JAVA_HOME. If set, this will use the value here as the java command
+        java_cmd = "~/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home/", -- by default will try to get java 17+ path by using JAVA_HOME. If set, this will use the value here as the java command
       })
     end,
   },

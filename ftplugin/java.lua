@@ -2,7 +2,7 @@ local home = os.getenv("HOME")
 local workspace_path = home .. "/.local/share/nvim/jdtls-workspace/"
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
 local workspace_dir = workspace_path .. project_name
-
+local spring_boot = require("spring_boot")
 local status, jdtls = pcall(require, "jdtls")
 if not status then
   return
@@ -72,6 +72,10 @@ local config = {
     bundles = {},
   },
 }
+
+vim.list_extend(config.init_options.bundles, spring_boot.java_extensions())
+spring_boot.init_lsp_commands()
+
 require("jdtls").start_or_attach(config)
 
 vim.keymap.set("n", "<leader>co", "<Cmd>lua require'jdtls'.organize_imports()<CR>", { desc = "Organize Imports" })
